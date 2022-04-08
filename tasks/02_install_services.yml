@@ -21,3 +21,4 @@
 - name: Install all greylog services
   ansible.builtin.apt: 
     name: "{{ packages }}"
+    

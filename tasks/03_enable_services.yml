@@ -12,3 +12,4 @@
   ansible.builtin.service:
     name: graylog-server.service
     enabled: yes
+    
