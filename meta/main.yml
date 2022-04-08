@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  role_name: Provision_Graylog
+  author: Dan Eckholm
+  description: Patch Linux hosts (Centos/Ubuntu) 
+  license: BSD-3-Clause
+  min_ansible_version: 2.11
+  platforms:
+    - name: EL
+      versions:
+        - 8
+  galaxy_tags:
+    - Provision_Graylog
+    - graylog
+

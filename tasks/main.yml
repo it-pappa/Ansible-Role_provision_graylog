@@ -1,0 +1,9 @@
+---
+- name: Download Graylog
+  ansible.builtin.import_tasks: 01_download_graylog.yml
+
+- name: Install services
+  ansible.builtin.import_tasks: 02_install_services.yml
+
+- name: Restart and Enable services
+  ansible.builtin.import_tasks: 03_enable_services.yml

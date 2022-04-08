@@ -1,0 +1,14 @@
+---
+- name: Restart Mongodb
+  ansible.builtin.service: 
+    name: name=mongodb state=restarted
+
+- name: Enable service mongodb
+  ansible.builtin.service:
+    name: mongodb
+    enabled: yes
+
+- name: Enabled greylog when boot
+  ansible.builtin.service:
+    name: graylog-server.service
+    enabled: yes

@@ -1,0 +1,23 @@
+---
+- name: Install openjdk-jre-headless
+  ansible.builtin.apt: 
+    name: openjdk-8-jre-headless
+
+- name: Install and configure elasticsearch
+  ansible.builtin.shell: sudo bash /tmp/elastic.sh
+
+- name: Install mongoDB
+  ansible.builtin.apt: 
+    name: mongodb
+    state: present
+    update_cache: yes
+
+- name: Install Repo
+  ansible.builtin.shell: sudo dpkg -i /tmp/graylog-4.2-repository_latest.deb
+
+- name: Install Repo
+  ansible.builtin.shell: apt-get update
+
+- name: Install all greylog services
+  ansible.builtin.apt: 
+    name: "{{ packages }}"
